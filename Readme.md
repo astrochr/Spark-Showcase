@@ -150,7 +150,6 @@ Critic interprets the context and assigns meaning to changes.
 Dreamlayer adjusts Spark's "emotional" state (creativity, tone, temperature).
 
 Every 30 seconds, Spark subtly retunes itself – learning to stay balanced between structure and imagination.
-That's not just code automation; that's emergent regulation.
 
 🧠 Architecture Snapshot
 
