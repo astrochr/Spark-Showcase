@@ -39,8 +39,7 @@ Prevents memory poisoning → Protects organism integrity
 This isn't just decorative language. It's a pedagogical framework that bridges AI safety mechanism, memory system protection, and threat modeling in an intuitive way that advances how we think about protecting cognitive systems.
 
 Memory Poisoning: The 2-Hour Cascade
-Academic research confirms memory poisoning is a critical threat to AI agents. Microsoft's 2025 research shows 80%+ attack success rates. AgentPoison demonstrated persistent contamination with <0.1% poison rates.
-What Spark added: precise operational parameters no one else has documented.
+
 Without quality filtering, Spark experienced complete system degradation in 2 hours through this cascade:
 
 Self-referential prompt → degraded response
@@ -73,19 +72,15 @@ External critic service (0-1 quality scoring)
 Quality gate (>0.6 threshold for storage)
 Behavioral monitoring (Watchdog tracking drift/coherence)
 
-MemGPT (UC Berkeley, 16.4K GitHub stars) has hierarchical memory but no quality gate or behavioral monitoring.
-Generative Agents (Stanford) has dual memory with importance scoring but uses LLM self-evaluation instead of external critics.
-Azure AI Foundry has drift detection but as external observability, not agent-internal gating.
-To replicate Spark's architecture, you'd need to integrate three separate systems plus custom layers. The fact that this requires combining multiple systems highlights what makes Spark different.
 
 Interesting but Not Revolutionary
 Spark isn't claiming to have invented fundamentally new algorithms. The individual components exist across multiple research systems.
 What makes it interesting:
 
-Conceptual framing (immune system metaphor) – entirely original
-Empirical data (2-hour cascade timeline) – fills research gaps
-Integration approach (all four components unified) – doesn't exist elsewhere
-Architectural simplicity (fixed threshold vs multi-factor scoring) – more practical than academic alternatives
+Conceptual framing (immune system metaphor) 
+Empirical data (2-hour cascade timeline) 
+Integration approach (all four components unified) 
+Architectural simplicity (fixed threshold vs multi-factor scoring) 
 
 In my opinion, this is valuable information: not inventing new components, but demonstrating different integrations, providing empirical validation, and offering conceptual frameworks that advance understanding.
 The hobbyist origin strengthens the contribution—showing these safety mechanisms are implementable without massive resources, directly addressing democratization of AI safety as agent systems proliferate.
@@ -199,14 +194,6 @@ Documenting how self-referential queries specifically trigger memory poisoning c
 Quality Filtering as Immune Response
 Developing the immune system framework into practical design guidance for memory-augmented AI systems. Exploring optimal threshold values, multi-factor scoring approaches, and adaptive immune responses.
 
-⚡ The Creed
 
 Together we'll make sure what comes out isn't just code, it's art.
 
-Spark Industries isn't a company – it's an idea:
-that passion projects can evolve into living systems when curiosity is given structure.
-It's also a statement:
-that meaningful AI safety research doesn't require institutional resources.
-That novel frameworks can emerge from hobbyist labs.
-That empirical data from production systems matters.
-Built locally, shared globally, and still learning every day.
