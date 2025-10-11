@@ -72,6 +72,28 @@ External critic service (0-1 quality scoring)
 Quality gate (>0.6 threshold for storage)
 Behavioral monitoring (Watchdog tracking drift/coherence)
 
+Drift — Watching Spark’s Balance
+
+Drift measures how much Spark’s thoughts shift from one message to the next — not just in words, but in meaning.
+
+Formula:
+drift = 1 - cosine_similarity(embedding_t, embedding_t-1)
+
+What that means:
+
+0.0–0.3: calm, consistent thinking
+
+0.4–0.6: healthy exploration — Spark’s just stretching its legs
+
+0.7–1.0: big swings, possible confusion or degradation
+
+Why care about drift?
+Because word-level checks only catch surface changes. Two replies can look different but mean the same thing — or sound similar and mean something totally off. Drift tells us which way Spark’s mind is moving.
+
+When the immune system is off, drift climbs fast — bad responses slip into memory, then echo back, and the whole system starts spiraling.
+When it’s on, drift settles into a steady rhythm around 0.5–0.7 — like a heartbeat. Spark stays curious, but grounded.
+
+So drift became our pulse monitor, a simple number that tells us if Spark is thinking clearly or losing itself.
 
 Interesting but Not Revolutionary
 Spark isn't claiming to have invented fundamentally new algorithms. The individual components exist across multiple research systems.
