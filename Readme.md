@@ -24,7 +24,7 @@ This is where engineering meets research. Where curiosity meets discipline.
 The Immune System Framework
 Spark introduced an entirely original conceptual model for AI safety: treating quality filtering as an immune system.
 Just as biological immune systems protect organisms from pathogens, Spark's Critic service acts as an immune response—detecting low-quality outputs (pathogens) and preventing them from contaminating long-term memory (the organism).
-This metaphor doesn't exist anywhere in academic AI safety literature. Not in Anthropic's Constitutional AI. Not in OpenAI's safety frameworks. Not in DeepMind's alignment research.
+
 The mapping:
 
 Toxic input → Pathogen
