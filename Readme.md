@@ -147,30 +147,8 @@ Every 30 seconds, Spark subtly retunes itself – learning to stay balanced betw
 That's not just code automation; that's emergent regulation.
 
 🧠 Architecture Snapshot
-    Frontend 
-              ↓
-     Backend 
-              ↓
-   ┌─────────────────────┐
-   │   Memory Manager    │
-   │  (Rolling + FAISS)  │
-   └─────────────────────┘
-              ↓
-        (GPU Inference)
-              ↓
-    ┌─────────────────────┐
-    │      Critic         │ ← Immune System
-    │   (Quality Gate)    │   (Scores 0-1)
-    └─────────────────────┘
-              ↓
-         [>0.6 threshold]
-              ↓
-    Long-term Memory 
-              ↓
-    ┌─────────────────────┐
-    │     Watchdog        │ ← Behavioral Monitor
-    │  (Drift tracking)   │   (Coherence + Health)
-    └─────────────────────┘
+
+![Spark Architecture](assets/architecture_diagram.png)
     
 Each module is independent, containerized, and observable.
 Prometheus tracks metrics. Grafana visualizes behavior.
