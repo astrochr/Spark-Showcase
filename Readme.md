@@ -8,6 +8,7 @@ Personal project – continuing to pursue my curiosity.
 Disclaimer:Spark is an independent research prototype built for experimentation with AI memory, drift, and safety mechanisms. While the system works locally, it’s not intended for production use. These are just results from my own experience/mistakes. Pursuing my curiosity is my number #1 goal, right now that goal is whatever the end of Spark is. I will do my best to keep this updated, but im just a guy with 2 gpus trying to figure it all out.
 
 ⚙️ Overview
+
 Spark Industries is a living AI lab built entirely from curiosity and persistence – no cloud, no corporate scaffolding.
 It began as a simple Unity demo: one NPC, one dialogue box, and a question –
 
@@ -23,6 +24,7 @@ An integrated cognitive architecture that doesn't exist anywhere else.
 This is where engineering meets research. Where curiosity meets discipline.
 
 🔬 Research Contributions
+
 The Immune System Framework
 Spark introduced an entirely original conceptual model for AI safety: treating quality filtering as an immune system.
 Just as biological immune systems protect organisms from pathogens, Spark's Critic service acts as an immune response—detecting low-quality outputs (pathogens) and preventing them from contaminating long-term memory (the organism).
@@ -90,6 +92,7 @@ The hobbyist origin strengthens the contribution—showing these safety mechanis
 
 🚀 Evolution
 🧩 Mark I – Unity Prototype
+
 The first heartbeat.
 Spark began as a small Unity scene where a player could type to an NPC and receive replies.
 It wasn't about polish – it was proof.
@@ -97,6 +100,7 @@ The backend was barebones, but it showed that a frontend ↔ backend conversatio
 That first message chain set the tone: curiosity > comfort.
 
 🔗 Mark II – KoboldCPP ↔ ComfyUI Bridge
+
 Next came connection.
 Spark's world expanded into multimodal territory – text and images working together.
 The KoboldCPP text engine and ComfyUI image pipeline were linked through orchestrated scripts.
@@ -104,6 +108,7 @@ It was the moment Spark learned to see what it was saying.
 From here, everything became about orchestration – keeping separate minds in sync.
 
 🌐 Mark III – Flask API Layer
+
 The third phase introduced structure.
 A lightweight Flask backend became Spark's nervous system – exposing endpoints like /npc and /generate that let the frontend and models talk through clean JSON routes.
 This was the unification moment: different languages, frameworks, and models speaking a common protocol.
@@ -111,6 +116,7 @@ It made Spark reproducible: clone → build → run → interact.
 It also made Spark shareable – a real system, not just a sandbox.
 
 🧭 Mark IV – Watchdog Ops
+
 With more complexity came instability – and that's where Watchdog entered.
 This phase was all about self-monitoring.
 Watchdog tracked drift (creative deviation over time), coherence, and latency, writing it all to a live metrics file and Postgres tables.
@@ -120,6 +126,7 @@ Migration to Ubuntu bare-metal doubled performance and stability, cutting drift 
 For the first time, Spark could stay steady without supervision.
 
 💭 Mark V – Dreamlayer & Critic
+
 Once stable, Spark needed introspection.
 Dreamlayer became the imagination: a process that looked at behavioral logs and tuned creativity ("temperature") dynamically.
 Critic became the logic center, evaluating coherence, reasoning, and consistency.
@@ -132,12 +139,14 @@ The 0.6 threshold became a defense mechanism: only healthy responses could enter
 Without this protection, self-referential attacks caused complete system failure in 2 hours.
 
 🔨 Mark V.5 – Forge
+
 The latest stage, Forge, added self-improvement.
 It reads performance traces, then generates or patches utility scripts – under Critic's supervision.
 It's not fully autonomous (yet), but it marks Spark's first step toward self-maintenance.
 Where Dreamlayer refines the mind, Forge refines the tools.
 
 🔄 The Loop
+
 Spark's behavior is shaped by a feedback triad:
 User → Spark → Watchdog → Critic → Dreamlayer → Spark
 
@@ -157,6 +166,7 @@ Prometheus tracks metrics. Grafana visualizes behavior.
 Spark's internal architecture mirrors a living system: sensory input, reasoning, memory, reflection, and immune response – all wired together.
 
 📊 Results & Highlights
+
 Capability 
 ResultNotesDrift variance↓ 10–15% FAISS + Watchdog integration;
 
@@ -179,6 +189,7 @@ ReproducibilityClone → Compose → RunWorks across Linux/Windows setups;
 Spark became what every tinkerer dreams of – a system that keeps itself interesting and safe.
 
 📚 Research Papers
+
 Spark's Cognitive AI Architecture: A Novelty Assessment (2025)
 Comprehensive analysis of Spark's contributions to AI safety, memory system design, and cognitive architecture. Documents the immune system framework, empirical memory poisoning cascade data, and integrated architecture novelty. Includes citations to 15+ academic papers positioning Spark's work within current research.
 [Full paper: /research/novelty-assessment.md]
@@ -198,6 +209,7 @@ AI safety: Constitutional AI (Anthropic), safety frameworks (OpenAI/DeepMind)
 
 
 🎯 Current Research Focus
+
 Behavioral Drift Profiling
 Investigating how different prompt types (technical, emotional, creative, casual) affect response consistency. Using Watchdog as an automated test harness to build personality profiles across conversational contexts.
 Memory Composition → Personality Drift
