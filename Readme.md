@@ -52,6 +52,8 @@ Total system failure within 2 hours
 
 ![Spark Drift Analysis](SparkR1Snapshot.png)
 
+📊 **[View Interactive Drift Analysis](https://astrochr.github.io/Spark-Showcase/spark_drift_visualization_R1.html)**
+
 *Visualization of Spark's behavioral stability under three conditions: without quality filtering (red, catastrophic failure at 2 hours), STM-only architecture (orange, irregular oscillations), and full immune system with FAISS semantic anchoring (blue, controlled rhythmic exploration). Latency remains stable across all conditions (~1.9s), demonstrating that memory protection adds no performance penalty.*
 
 ---
