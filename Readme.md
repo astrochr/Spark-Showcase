@@ -18,7 +18,7 @@ Over time, that question became a system.
 Spark evolved into a self-contained ecosystem that reflects, measures, and adapts in real time.
 It's not just a chatbot – it's a research playground, an ongoing experiment in cognition, architecture, and AI safety.
 What started as a personal project became something more:
-A novel approach to memory contamination prevention.
+An interesting approach to memory contamination prevention.
 Empirical data on catastrophic failure cascades.
 An integrated cognitive architecture that doesn't exist anywhere else.
 This is where engineering meets research. Where curiosity meets discipline.
@@ -187,26 +187,6 @@ ContainerizationFullDockerized ecosystem with live monitoring;
 ReproducibilityClone → Compose → RunWorks across Linux/Windows setups;
 
 Spark became what every tinkerer dreams of – a system that keeps itself interesting and safe.
-
-📚 Research Papers
-
-Spark's Cognitive AI Architecture: A Novelty Assessment (2025)
-Comprehensive analysis of Spark's contributions to AI safety, memory system design, and cognitive architecture. Documents the immune system framework, empirical memory poisoning cascade data, and integrated architecture novelty. Includes citations to 15+ academic papers positioning Spark's work within current research.
-[Full paper: /research/novelty-assessment.md]
-Key Findings:
-
-Immune system metaphor for quality filtering: entirely original
-2-hour cascade timeline data: fills research gaps
-Integrated four-component architecture: unique combination
-Positioned at intersection of memory systems, AI safety, and failure mode documentation
-
-Recommended Citations:
-
-Memory systems: Reflexion (NeurIPS 2023), MemGPT (UC Berkeley), MongoDB AI Memory
-Memory poisoning: Microsoft AI Red Team (2025), AgentPoison (NeurIPS 2024), PoisonedRAG (USENIX 2025)
-Cognitive architecture: CoALA (Princeton), Generative Agents (Stanford)
-AI safety: Constitutional AI (Anthropic), safety frameworks (OpenAI/DeepMind)
-
 
 🎯 Current Research Focus
 
