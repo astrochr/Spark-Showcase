@@ -148,7 +148,7 @@ That's not just code automation; that's emergent regulation.
 
 🧠 Architecture Snapshot
 
-![Spark Architecture](assets/architecture_diagram.png)
+![Spark Architecture](architecture_diagram.png)
     
 Each module is independent, containerized, and observable.
 Prometheus tracks metrics. Grafana visualizes behavior.
