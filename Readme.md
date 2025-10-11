@@ -5,6 +5,8 @@ Personal project – continuing to pursue my curiosity.
   *     ⚡     *    .   *
     .       *       .
 
+Disclaimer:Spark is an independent research prototype built for experimentation with AI memory, drift, and safety mechanisms. While the system works locally, it’s not intended for production use. These are just results from my own experience/mistakes. Pursuing my curiosity is my number #1 goal, right now that goal is whatever the end of Spark is. I will do my best to keep this updated, but im just a guy with 2 gpus trying to figure it all out.
+
 ⚙️ Overview
 Spark Industries is a living AI lab built entirely from curiosity and persistence – no cloud, no corporate scaffolding.
 It began as a simple Unity demo: one NPC, one dialogue box, and a question –
