@@ -95,8 +95,7 @@ When it’s on, drift settles into a steady rhythm around 0.5–0.7 — like a h
 
 So drift became our pulse monitor, a simple number that tells us if Spark is thinking clearly or losing itself.
 
-Interesting but Not Revolutionary
-Spark isn't claiming to have invented fundamentally new algorithms. The individual components exist across multiple research systems.
+
 What makes it interesting:
 
 Conceptual framing (immune system metaphor) 
