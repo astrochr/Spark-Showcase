@@ -46,10 +46,18 @@ Model generates worse responses using bad context
 Worse responses stored, creating feedback loop
 Total system failure within 2 hours
 
+---
+
+**Figure 1: Empirical Drift Patterns Across System States**
+
+![Spark Drift Analysis](SparkR1Snapshot.png)
+
+*Visualization of Spark's behavioral stability under three conditions: without quality filtering (red, catastrophic failure at 2 hours), STM-only architecture (orange, irregular oscillations), and full immune system with FAISS semantic anchoring (blue, controlled rhythmic exploration). Latency remains stable across all conditions (~1.9s), demonstrating that memory protection adds no performance penalty.*
+
+---
+
 This temporal dynamic—how fast systems move from contamination to collapse—is missing from existing research. Most papers focus on achieving specific malicious outputs, not documenting complete failure timelines.
 Spark's observation fills a critical gap: without immune system protection (quality gates), conversational AI systems fail catastrophically within hours, not days or weeks.
-
-
 
 Integrated Cognitive Architecture
 No existing system combines all of Spark's architectural components in a unified implementation:
