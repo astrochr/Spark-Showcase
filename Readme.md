@@ -26,7 +26,7 @@ This is where engineering meets research. Where curiosity meets discipline.
 🔬 Research Contributions
 
 The Immune System Framework
-Spark introduced an entirely original conceptual model for AI safety: treating quality filtering as an immune system.
+Spark introduced an interesting model for AI safety: treating quality filtering as an immune system.
 Just as biological immune systems protect organisms from pathogens, Spark's Critic service acts as an immune response—detecting low-quality outputs (pathogens) and preventing them from contaminating long-term memory (the organism).
 
 The mapping:
@@ -62,11 +62,11 @@ Total system failure within 2 hours
 
 ---
 
-This temporal dynamic—how fast systems move from contamination to collapse—is missing from existing research. Most papers focus on achieving specific malicious outputs, not documenting complete failure timelines.
+This temporal dynamic, how fast systems move from contamination to collapse, is something to be researched. Most papers focus on achieving specific malicious outputs, not documenting complete failure timelines.
 Spark's observation fills a critical gap: without immune system protection (quality gates), conversational AI systems fail catastrophically within hours, not days or weeks.
 
 Integrated Cognitive Architecture
-No existing system combines all of Spark's architectural components in a unified implementation:
+Not many (If any) existing system combines all of Spark's architectural components in a unified implementation:
 
 Dual-layer memory (rolling buffer + FAISS semantic search)
 External critic service (0-1 quality scoring)
@@ -76,18 +76,18 @@ Behavioral monitoring (Watchdog tracking drift/coherence)
 MemGPT (UC Berkeley, 16.4K GitHub stars) has hierarchical memory but no quality gate or behavioral monitoring.
 Generative Agents (Stanford) has dual memory with importance scoring but uses LLM self-evaluation instead of external critics.
 Azure AI Foundry has drift detection but as external observability, not agent-internal gating.
-To replicate Spark's architecture, you'd need to integrate three separate systems plus custom layers. The fact that this requires combining multiple systems highlights Spark's novelty in integration.
+To replicate Spark's architecture, you'd need to integrate three separate systems plus custom layers. The fact that this requires combining multiple systems highlights what makes Spark different.
 
-Novel but Not Revolutionary
+Interesting but Not Revolutionary
 Spark isn't claiming to have invented fundamentally new algorithms. The individual components exist across multiple research systems.
-What makes it novel:
+What makes it interesting:
 
 Conceptual framing (immune system metaphor) – entirely original
 Empirical data (2-hour cascade timeline) – fills research gaps
 Integration approach (all four components unified) – doesn't exist elsewhere
 Architectural simplicity (fixed threshold vs multi-factor scoring) – more practical than academic alternatives
 
-This is valuable engineering research: not inventing new components, but demonstrating novel integration, providing empirical validation, and offering conceptual frameworks that advance understanding.
+In my opinion, this is valuable information: not inventing new components, but demonstrating different integrations, providing empirical validation, and offering conceptual frameworks that advance understanding.
 The hobbyist origin strengthens the contribution—showing these safety mechanisms are implementable without massive resources, directly addressing democratization of AI safety as agent systems proliferate.
 
 🚀 Evolution
@@ -95,17 +95,17 @@ The hobbyist origin strengthens the contribution—showing these safety mechanis
 
 The first heartbeat.
 Spark began as a small Unity scene where a player could type to an NPC and receive replies.
-It wasn't about polish – it was proof.
+It wasn't about polish, it was proof.
 The backend was barebones, but it showed that a frontend ↔ backend conversation loop could exist locally.
 That first message chain set the tone: curiosity > comfort.
 
 🔗 Mark II – KoboldCPP ↔ ComfyUI Bridge
 
 Next came connection.
-Spark's world expanded into multimodal territory – text and images working together.
+Spark's world expanded into multimodel territory, text and images working together.
 The KoboldCPP text engine and ComfyUI image pipeline were linked through orchestrated scripts.
 It was the moment Spark learned to see what it was saying.
-From here, everything became about orchestration – keeping separate minds in sync.
+From here, everything became about orchestration, keeping separate minds in sync.
 
 🌐 Mark III – Flask API Layer
 
