@@ -213,7 +213,6 @@ Reproducibility, Clone → Compose → Run Works across Linux/Windows setups;
 
 "The Immune System"
 
-Spark introduced an interesting model for AI safety: treating quality filtering as an immune system.
 Just as biological immune systems protect organisms from pathogens, Spark's Critic service acts as an immune response—detecting low-quality outputs (pathogens) and preventing them from contaminating long-term memory (the organism).
 
 The mapping:
