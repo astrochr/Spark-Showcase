@@ -1,9 +1,4 @@
-⚡ S P A R K   I N D U S T R I E S ⚡
 Personal project – continuing to pursue my curiosity.
-           .     *     .
-    *        .      .     *
-  *     ⚡     *    .   *
-    .       *       .
 
 Disclaimer: While the system works locally, it’s not intended for production use. These are just results from my own experience/mistakes. Pursuing my curiosity is my number #1 goal, right now that goal is whatever the end of Spark is. I will do my best to keep this updated, but im just a guy with 2 gpus trying to figure it all out. I plan to use this to share as well as track my current progress/goals.
 
