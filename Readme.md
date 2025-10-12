@@ -225,6 +225,7 @@ Reproducibility, Clone → Compose → Run Works across Linux/Windows setups;
 
 🎯 Current Build/Research Focus
 
+
 | Status | Domain                         | Core Role                                                          |
 | :----: | :----------------------------- | :----------------------------------------------------------------- |
 |   ✅   | **Executive / Planning**       | Forge — designs and executes structured plans; Spark’s architect.  |
@@ -240,6 +241,11 @@ Reproducibility, Clone → Compose → Run Works across Linux/Windows setups;
 |   ⚙️   | **Social Cognition**           | Interaction layer — adjusts empathy and tone in conversation.      |
 |   ⚙️   | **Motivation / Reward**        | Feedback engine — stability and coherence serve as reward signals. |
 
+Fully Active: Forge · Memory Core · Dream · Watchdog
+Partial: Critic · Vision · Tuner · Emotion · Motor · Social · Reward
+Planned: Q-System (Attention / Focus)
+
+Together these modules form a living feedback loop — Spark’s synthetic nervous system, balancing curiosity with stability.
 
 It's still growing, but I'd like to see how far I can take it.
 
