@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spark Overnight Analysis</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin-bottom: 30px;
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Spark Overnight Analysis</h1>
+        <div class="subtitle">12.5 Hour Autonomous Run | No Rolling Memory | Temp 0.5</div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-label">Duration</div>
+                <div class="stat-value">12.5h</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Total Memories</div>
+                <div class="stat-value" id="totalMemories">2787</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Avg Drift</div>
+                <div class="stat-value" id="avgDrift">0.67</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Avg Quality</div>
+                <div class="stat-value" id="avgQuality">0.58</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Cache Efficiency</div>
+                <div class="stat-value">63%</div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="driftChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="qualityChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="memoryChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="coherenceChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Sample every 5th data point for readability
+        const times = [];
+        const drift = [];
+        const criticFinal = [];
+        const criticSemantic = [];
+        const faissTotal = [];
+        const coherenceMap = {'POOR': 1, 'FAIR': 2, 'GOOD': 3, 'EXCELLENT': 4};
+        const coherence = [];
+
+        // Parse data (sampled every 5 minutes)
+        const rawData = `00:34,0.820,0.466,0.332,8,POOR
+00:44,0.516,0.534,0.438,44,FAIR
+00:54,0.682,0.574,0.396,89,FAIR
+01:04,0.680,0.482,0.38,117,POOR
+01:14,0.730,0.534,0.431,156,FAIR
+01:24,0.795,0.579,0.38,195,FAIR
+01:34,0.711,0.568,0.407,231,FAIR
+01:44,0.487,0.574,0.439,271,FAIR
+01:54,0.739,0.659,0.431,312,FAIR
+02:04,0.765,0.574,0.386,348,FAIR
+02:14,0.716,0.629,0.455,386,FAIR
+02:24,0.587,0.6,0.375,421,GOOD
+02:34,0.528,0.593,0.381,458,FAIR
+02:44,0.783,0.573,0.473,497,FAIR
+02:54,0.761,0.518,0.397,533,FAIR
+03:04,0.692,0.646,0.469,575,GOOD
+03:14,0.710,0.574,0.398,606,FAIR
+03:24,0.683,0.599,0.383,643,FAIR
+03:34,0.699,0.572,0.427,682,FAIR
+03:44,0.561,0.624,0.455,722,GOOD
+03:54,0.680,0.614,0.372,758,GOOD
+04:04,0.618,0.561,0.344,793,FAIR
+04:14,0.758,0.57,0.395,829,FAIR
+04:24,0.700,0.605,0.394,865,GOOD
+04:34,0.584,0.626,0.434,904,GOOD
+04:44,0.641,0.564,0.487,942,FAIR
+04:54,0.690,0.567,0.479,981,FAIR
+05:04,0.533,0.491,0.419,1018,POOR
+05:14,0.800,0.613,0.422,1057,FAIR
+05:24,0.635,0.600,0.473,1097,GOOD
+05:34,0.496,0.598,0.455,1132,FAIR
+05:44,0.720,0.561,0.366,1172,FAIR
+05:54,0.590,0.542,0.392,1210,FAIR
+06:04,0.704,0.634,0.441,1250,FAIR
+06:14,0.791,0.542,0.387,1286,FAIR
+06:24,0.856,0.496,0.389,1324,POOR
+06:34,0.501,0.549,0.508,1361,FAIR
+06:44,0.852,0.581,0.354,1396,POOR
+06:54,0.682,0.675,0.547,1436,GOOD
+07:04,0.667,0.625,0.5,1476,GOOD
+07:14,0.577,0.534,0.356,1511,FAIR
+07:24,0.595,0.576,0.457,1551,FAIR
+07:34,0.667,0.588,0.439,1589,FAIR
+07:44,0.634,0.602,0.403,1627,GOOD
+07:54,0.764,0.576,0.449,1659,FAIR
+08:04,0.683,0.56,0.449,1696,FAIR
+08:14,0.614,0.582,0.481,1736,FAIR
+08:24,0.798,0.616,0.36,1771,FAIR
+08:34,0.668,0.606,0.359,1810,GOOD
+08:44,0.616,0.553,0.455,1849,FAIR
+08:54,0.756,0.564,0.374,1883,FAIR
+09:04,0.639,0.629,0.522,1921,GOOD
+09:14,0.785,0.541,0.376,1956,FAIR
+09:24,0.681,0.629,0.441,1994,GOOD
+09:34,0.779,0.613,0.455,2029,FAIR
+09:44,0.658,0.594,0.449,2067,FAIR
+09:54,0.607,0.597,0.412,2106,FAIR
+10:04,0.667,0.625,0.5,2149,FAIR
+10:14,0.507,0.507,0.4,2179,FAIR
+10:24,0.682,0.538,0.489,2217,FAIR
+10:34,0.565,0.612,0.495,2256,GOOD
+10:44,0.688,0.565,0.438,2296,FAIR
+10:54,0.498,0.607,0.396,2333,GOOD
+11:04,0.755,0.641,0.443,2368,FAIR
+11:14,0.605,0.537,0.391,2407,FAIR
+11:24,0.700,0.596,0.41,2443,FAIR
+11:34,0.737,0.603,0.515,2484,FAIR
+11:44,0.679,0.521,0.402,2522,FAIR
+11:54,0.675,0.494,0.394,2562,POOR
+12:04,0.770,0.660,0.499,2595,FAIR
+12:14,0.645,0.510,0.406,2630,FAIR
+12:24,0.700,0.615,0.403,2667,GOOD
+12:34,0.821,0.569,0.445,2703,POOR
+12:44,0.564,0.548,0.447,2741,FAIR
+12:54,0.810,0.603,0.441,2783,POOR`;
+
+        rawData.split('\n').forEach(line => {
+            const [time, d, cf, cs, ft, coh] = line.split(',');
+            times.push(time);
+            drift.push(parseFloat(d));
+            criticFinal.push(parseFloat(cf));
+            criticSemantic.push(parseFloat(cs));
+            faissTotal.push(parseInt(ft));
+            coherence.push(coherenceMap[coh] || 2);
+        });
+
+        // Calculate stats
+        document.getElementById('avgDrift').textContent = 
+            (drift.reduce((a, b) => a + b) / drift.length).toFixed(3);
+        document.getElementById('avgQuality').textContent = 
+            (criticFinal.reduce((a, b) => a + b) / criticFinal.length).toFixed(3);
+
+        // Chart configs
+        const chartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {
+                intersect: false,
+                mode: 'index'
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        maxTicksLimit: 15
+                    }
+                }
+            }
+        };
+
+        // Drift Chart
+        new Chart(document.getElementById('driftChart'), {
+            type: 'line',
+            data: {
+                labels: times,
+                datasets: [{
+                    label: 'Drift Score',
+                    data: drift,
+                    borderColor: '#e74c3c',
+                    backgroundColor: 'rgba(231, 76, 60, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: 'Behavioral Drift Over Time',
+                        font: { size: 16 }
+                    }
+                },
+                scales: {
+                    ...chartOptions.scales,
+                    y: {
+                        min: 0,
+                        max: 1,
+                        title: { display: true, text: 'Drift Score' }
+                    }
+                }
+            }
+        });
+
+        // Quality Chart
+        new Chart(document.getElementById('qualityChart'), {
+            type: 'line',
+            data: {
+                labels: times,
+                datasets: [{
+                    label: 'Final Score',
+                    data: criticFinal,
+                    borderColor: '#3498db',
+                    backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }, {
+                    label: 'Semantic Score',
+                    data: criticSemantic,
+                    borderColor: '#9b59b6',
+                    backgroundColor: 'rgba(155, 89, 182, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: 'Critic Quality Scores',
+                        font: { size: 16 }
+                    },
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    }
+                },
+                scales: {
+                    ...chartOptions.scales,
+                    y: {
+                        min: 0,
+                        max: 1,
+                        title: { display: true, text: 'Quality Score' }
+                    }
+                }
+            }
+        });
+
+        // Memory Growth Chart
+        new Chart(document.getElementById('memoryChart'), {
+            type: 'line',
+            data: {
+                labels: times,
+                datasets: [{
+                    label: 'FAISS Memories',
+                    data: faissTotal,
+                    borderColor: '#2ecc71',
+                    backgroundColor: 'rgba(46, 204, 113, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: 'Memory Growth (FAISS Entries)',
+                        font: { size: 16 }
+                    }
+                },
+                scales: {
+                    ...chartOptions.scales,
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Total Memories' }
+                    }
+                }
+            }
+        });
+
+        // Coherence Chart
+        new Chart(document.getElementById('coherenceChart'), {
+            type: 'line',
+            data: {
+                labels: times,
+                datasets: [{
+                    label: 'Coherence Status',
+                    data: coherence,
+                    borderColor: '#f39c12',
+                    backgroundColor: 'rgba(243, 156, 18, 0.1)',
+                    fill: true,
+                    stepped: true
+                }]
+            },
+            options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: 'System Coherence Status',
+                        font: { size: 16 }
+                    }
+                },
+                scales: {
+                    ...chartOptions.scales,
+                    y: {
+                        min: 1,
+                        max: 4,
+                        ticks: {
+                            stepSize: 1,
+                            callback: function(value) {
+                                const labels = {1: 'POOR', 2: 'FAIR', 3: 'GOOD', 4: 'EXCELLENT'};
+                                return labels[value];
+                            }
+                        },
+                        title: { display: true, text: 'Coherence Level' }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
