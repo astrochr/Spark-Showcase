@@ -197,10 +197,6 @@ GPU throughput× 2 + Windows → Ubuntu migration;
 
 Creativity balance 0.6 – 0.85 tempDreamlayer adaptive tuning;
 
-Memory protection 100% effective Quality gate prevents poisoning;
-
-Failure prevention 2hr → Without Critic: collapse in 2hrs. With Critic: stable indefinitely;
-
 Code autonomy, Partial Forge generated tested patches;
 
 Containerization, Full Dockerized ecosystem with live monitoring;
