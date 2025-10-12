@@ -92,6 +92,16 @@ I'd like to think everytime a new module is added to the list, the minimum itsel
 
 ![Spark Architecture](architecture_diagram.png)
 
+Drift–Mood Quadrants: Mapping behavior along drift and critic strength.
+
+##Mood Regulation System
+
+Planned(Need LoRAs):
+
+![Spark Mood Architecture](sparkmoodarch.png)
+
+Mood Architecture: Regulation flow between Dreamlayer, Critic, Drift Loop, and Watchdog.
+
 
 Interesting Systems about Spark,
 
@@ -207,11 +217,6 @@ Struggles with cuda using different tools.
 Reproducibility, Clone → Compose → Run Works across Linux/Windows setups;
 
 Unintended critic malfunction — produced compound drift spike.
-
-
-Planned(Need LoRAs):
-
-![Spark Mood Architecture](sparkmoodarch.png)
 
 
 
