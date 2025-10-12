@@ -209,3 +209,4 @@ Struggles with cuda using different tools.
 
 Reproducibility, Clone → Compose → Run Works across Linux/Windows setups;
 
+Unintended critic malfunction — produced compound drift spike.
