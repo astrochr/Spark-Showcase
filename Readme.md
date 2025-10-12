@@ -35,18 +35,23 @@ Prevents memory poisoning → Protects organism integrity
 
 Memory Poisoning: The 2-Hour Cascade
 
-Without quality filtering, Spark experienced complete system degradation in 2 hours through this cascade:
+1.) Without quality filtering, Spark experienced complete system degradation in 2 hours through this cascade:
 
-Self-referential prompt → degraded response
-Degraded response stored to memory (no quality gate)
-Future queries retrieve degraded context
-Model generates worse responses using bad context
-Worse responses stored, creating feedback loop
-Total system failure within 2 hours
+2.) Self-referential prompt → degraded response
+
+3.) Degraded response stored to memory (no quality gate)
+
+4.) Future queries retrieve degraded context
+
+5.) Model generates worse responses using bad context
+
+6.) Worse responses stored, creating feedback loop
+
+7.)Total system failure within 2 hours
 
 ---
 
-**Figure 1: Empirical Drift Patterns Across System States**
+**Figure 1:Drift Patterns Across System States**
 
 ![Spark Drift Analysis](SparkR1Snapshot.png)
 
@@ -94,7 +99,7 @@ The Data (2-hour cascade timeline)
 Integration approach (all four components unified) 
 Architectural simplicity (fixed threshold vs multi-factor scoring) 
 
-In my opinion, this is information could be useful. I'm not inventing new components, but demonstrating different integrations, providing my results, and offering conceptual frameworks that advance understanding.
+In my opinion, this is information could be useful. I'm not inventing new components, but demonstrating different integrations, providing my results, and offering conceptual frameworks.
 Whats nice is, I added a bunch of checks and balances for Spark, this proves they work and are almost necessary to keep him stable.
 
 My Journy:
@@ -200,7 +205,7 @@ Notes Drift variance↓ 10–15% FAISS + Watchdog integration;
 
 Coherence stability↑ 18–22% Critic contextual feedback;
 
-GPU throughput× 2Windows → Ubuntu migration;
+GPU throughput× 2 + Windows → Ubuntu migration;
 
 Creativity balance 0.6 – 0.85 tempDreamlayer adaptive tuning;
 
@@ -218,7 +223,7 @@ Reproducibility, Clone → Compose → Run Works across Linux/Windows setups;
 
 Spark isn't much, but I'd like to see how far I can take it.
 
-🎯 Current Research Focus
+🎯 Current Build/Research Focus
 
 Behavioral Drift Profiling
 
