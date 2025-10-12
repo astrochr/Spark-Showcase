@@ -63,46 +63,6 @@ When it’s on, drift settles into a steady rhythm around 0.5–0.7 — like a h
 
 So drift became our pulse monitor, a simple number that tells us if Spark is thinking coherently or not.
 
-             🧭  Spark Drift–Mood Quadrant Map
-─────────────────────────────────────────────────────────────     
-                     ↑  Drift Variance ↑
-         (How much meaning changes between thoughts)
-
-                 ┌──────────────────────────────┐
-                 │          HIGH DRIFT          │
-                 │  "Exploratory / Unstable"    │
-                 │                              │
-     High Critic │  ⚡ Over-creative zone        │
-     Score ↓     │  - rapid topic shifts        │
-                 │  - hallucination risk        │
-                 │  - Dreamlayer cools temp     │
-                 │  Mood:  AGITATED / CHAOTIC   │
-                 ├──────────────────────────────┤
-                 │          LOW DRIFT           │
-                 │  "Focused / Consistent"      │
-                 │                              │
-     High Critic │  💡 Optimal coherence zone    │
-     Score ↑     │  - grounded reasoning        │
-                 │  - steady imagination        │
-                 │  - Dreamlayer maintains temp │
-                 │  Mood:  CALM / BALANCED      │
-                 └──────────────────────────────┘
-                        Critic Score →
-         (How coherent / logical Spark believes it is)
-
-─────────────────────────────────────────────────────────────
-Quadrant Summary:
- ┌──────────────────────────────┬──────────────────────────────┐
- │  High Drift + Low Critic     │  Low Drift + Low Critic      │
- │  = chaotic / confused        │  = stagnant / dull           │
- │  Dreamlayer ↓ temp           │  Dreamlayer ↑ temp           │
- │  Critic strict-mode ON       │  Critic lenient-mode ON      │
- ├──────────────────────────────┼──────────────────────────────┤
- │  High Drift + High Critic    │  Low Drift + High Critic     │
- │  = creative but confident    │  = calm and coherent         │
- │  Mood: inspired / flowing    │  Mood: focused / grounded    │
- └──────────────────────────────┴──────────────────────────────┘
-
 It is important to make sure this stays stable as new modules are added.
 
 | Status | Domain                         | Core Role                                                          |
