@@ -4,7 +4,7 @@ Disclaimer: While the system works locally, it’s not intended for production u
 
 ⚙️ Overview
 
-Spark Industries is my personal living AI lab built entirely from curiosity and persistence.
+Spark is my personal, locally built AI stack made entirely from curiosity and persistence.
 It began as a simple Unity demo: one NPC, one dialogue box, and a question,
 
 "What if I could make this thing actually think?"
