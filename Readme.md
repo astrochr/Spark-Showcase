@@ -199,7 +199,7 @@ Spark’s emotional signal is drift: too high and the Dream retunes; too low and
 Attention & Action (Q-System & Dispatch):
 Planned modules that will let Spark choose what to focus on and how to act — directing energy where it matters most.
 
-The best part is, these are the only ones I've come up with, so far.
+I'd like to think everytime a new module is added to the list, the minimum itself increases. With every module potentially leading to more. At times it might also decrease depending on if it's being used or justifying hardware juice it needs.
 
 📊 Results/Lessons Learned
 
