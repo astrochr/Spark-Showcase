@@ -167,13 +167,8 @@ Every 30 seconds, Spark subtly retunes itself – learning to stay balanced betw
 🧠 Architecture Snapshot
 
 ![Spark Architecture](architecture_diagram.png)
-    
-🧠 Spark’s Cognitive Architecture
 
 Inspired by the structure of the human brain. Some are implemented or being worked on.
-
-Spark’s design follows a simple belief: intelligence emerges through interaction between memory, imagination, reasoning, and regulation.
-To ground that belief, Spark mirrors twelve cognitive domains found in the human brain — each reinterpreted as a modular subsystem in its architecture.
 
 Planning & Judgment (Forge / Critic):
 The frontal pair — one creates, one evaluates. Forge builds ideas and code; Critic reviews and refines them, keeping Spark’s reasoning stable.
@@ -216,6 +211,8 @@ Failure prevention 2hr → Without Critic: collapse in 2hrs. With Critic: stable
 Code autonomy, Partial Forge generated tested patches;
 
 Containerization, Full Dockerized ecosystem with live monitoring;
+
+Struggles with cuda using different tools.
 
 Reproducibility, Clone → Compose → Run Works across Linux/Windows setups;
 
