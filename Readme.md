@@ -63,6 +63,8 @@ When it’s on, drift settles into a steady rhythm around 0.5–0.7 — like a h
 
 So drift became our pulse monitor, a simple number that tells us if Spark is thinking coherently or not.
 
+![Mood Quadrants](moodquads.png)
+
 It is important to make sure this stays stable as new modules are added.
 
 | Status | Domain                         | Core Role                                                          |
@@ -206,37 +208,10 @@ Reproducibility, Clone → Compose → Run Works across Linux/Windows setups;
 
 Unintended critic malfunction — produced compound drift spike.
 
-PLANNED (Need LoRA)
-                 🧠  Spark Mood Architecture
-─────────────────────────────────────────────────────────────
-              ┌──────────────────────────┐
-              │  DREAMLAYER (Temporal)   │
-              │  imagination / reflection│
-              │  → tunes temperature, LoRA│
-              └────────────┬─────────────┘
-                           │
-        ┌──────────────────┼──────────────────┐
-        │                                      │
-┌───────▼────────┐                     ┌───────▼────────┐
-│ CRITIC (Frontal)│                     │  DRIFT LOOP   │
-│ reasoning / logic│                     │ limbic signal │
-│ evaluates quality│                     │ measures shift│
-│   0–1 score      │                     │ 0.0–1.0 drift │
-└────────┬─────────┘                     └────────┬──────┘
-         │                                      │
-         │   feedback (critic_final, drift_avg) │
-         └──────────────────┬───────────────────┘
-                            │
-                ┌───────────▼───────────┐
-                │ WATCHDOG (Brainstem) │
-                │ monitors drift, latency│
-                │ triggers Dream tuning  │
-                └───────────┬───────────┘
-                            │
-               homeostasis / mood equilibrium
-─────────────────────────────────────────────────────────────
-       calm <0.3 → Dream lowers temp / load “calm” LoRA
-   healthy 0.4–0.6 → steady exploration
-       agitated >0.7 → Critic strict-mode + Dream retune
-─────────────────────────────────────────────────────────────
+
+Planned(Need LoRAs):
+
+![Spark Mood Architecture](sparkmoodarch.png)
+
+
 
