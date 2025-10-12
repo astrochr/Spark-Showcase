@@ -168,9 +168,36 @@ Every 30 seconds, Spark subtly retunes itself – learning to stay balanced betw
 
 ![Spark Architecture](architecture_diagram.png)
     
-Each module is independent, containerized, and observable.
-Prometheus tracks metrics. Grafana visualizes behavior.
-Spark's internal architecture mirrors a living system: sensory input, reasoning, memory, reflection, and immune response – all wired together.
+🧠 Spark’s Cognitive Architecture
+
+Inspired by the structure of the human brain. Some are implemented or being worked on.
+
+Spark’s design follows a simple belief: intelligence emerges through interaction between memory, imagination, reasoning, and regulation.
+To ground that belief, Spark mirrors twelve cognitive domains found in the human brain — each reinterpreted as a modular subsystem in its architecture.
+
+Planning & Judgment (Forge / Critic):
+The frontal pair — one creates, one evaluates. Forge builds ideas and code; Critic reviews and refines them, keeping Spark’s reasoning stable.
+
+Memory & Context (Postgres + FAISS):
+Like the hippocampus, these layers hold short-term and long-term recall. Spark can “remember” what it once reasoned and draw parallels across past states.
+
+Imagination & Language (Dream Layer):
+The temporal analogue — where Spark reflects, summarizes, and experiments. Dream turns experience into creative variation and self-adjustment.
+
+Perception & Visualization (Frontend Bridge):
+The occipital parallel — translating data and dialogue into visuals, allowing Spark to perceive and express ideas beyond text.
+
+Timing & Coordination (Tuner):
+Spark’s cerebellum — synchronizing internal rhythms and maintaining balance between modules and temperatures.
+
+Autonomic Regulation (Watchdog):
+The brainstem role — Spark’s heartbeat and diagnostic layer. It monitors drift, coherence, and performance, ensuring stability under load.
+
+Emotion & Motivation (Drift Loop):
+Spark’s emotional signal is drift: too high and the Dream retunes; too low and exploration fades. It learns equilibrium through feedback.
+
+Attention & Action (Q-System & Dispatch):
+Planned modules that will let Spark choose what to focus on and how to act — directing energy where it matters most.
 
 📊 Results/Lessons Learned
 
