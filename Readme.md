@@ -251,4 +251,4 @@ Memory Poisoning: The 2-Hour Cascade
 
 ---
 
-The data shows how fast systems move from contamination to collapse. Spark's observation brings up an interesting question: without quality gates, conversational AI systems fail quickly.
+The data shows how fast systems move from contamination to collapse, as well as usefulness of individual layers.
