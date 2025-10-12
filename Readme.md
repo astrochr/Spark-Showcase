@@ -199,6 +199,8 @@ Spark’s emotional signal is drift: too high and the Dream retunes; too low and
 Attention & Action (Q-System & Dispatch):
 Planned modules that will let Spark choose what to focus on and how to act — directing energy where it matters most.
 
+The best part is, these are the only ones I've come up with, so far.
+
 📊 Results/Lessons Learned
 
 Notes Drift variance↓ 10–15% FAISS + Watchdog integration;
