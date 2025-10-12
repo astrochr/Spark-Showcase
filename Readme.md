@@ -223,9 +223,25 @@ Struggles with cuda using different tools.
 
 Reproducibility, Clone → Compose → Run Works across Linux/Windows setups;
 
-Spark isn't much, but I'd like to see how far I can take it.
-
 🎯 Current Build/Research Focus
+
+| Status | Domain                         | Core Role                                                          |
+| :----: | :----------------------------- | :----------------------------------------------------------------- |
+|   ✅   | **Executive / Planning**       | Forge — designs and executes structured plans; Spark’s architect.  |
+|   ⚙️   | **Ethical Supervision**        | Critic — reviews outputs for clarity, coherence, and judgment.     |
+|   ✅   | **Memory & Context**           | Postgres + FAISS — anchors short-term and long-term recall.        |
+|   ✅   | **Imagination & Language**     | Dreamlayer — reflects, summarizes, and re-imagines.                |
+|   ⚙️   | **Perception / Visualization** | Frontend bridge — translates text and state into visuals.          |
+|   ⚙️   | **Timing / Coordination**      | Tuner — synchronizes modules and internal rhythm.                  |
+|   ✅   | **Autonomic Regulation**       | Watchdog — heartbeat, diagnostics, and baseline safety.            |
+|   🚧   | **Attention / Control**        | Q-System — planned focus manager for dynamic task routing.         |
+|   ⚙️   | **Emotion / Interoception**    | Drift loop — gauges internal state; Dream rebalances.              |
+|   ⚙️   | **Motor / Action**             | Dispatcher — turns intent into outward API and container actions.  |
+|   ⚙️   | **Social Cognition**           | Interaction layer — adjusts empathy and tone in conversation.      |
+|   ⚙️   | **Motivation / Reward**        | Feedback engine — stability and coherence serve as reward signals. |
+
+
+It's still growing, but I'd like to see how far I can take it.
 
 Behavioral Drift Profiling
 
