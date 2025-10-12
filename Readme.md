@@ -203,14 +203,19 @@ Spark became what every tinkerer dreams of, a system that keeps itself interesti
 🎯 Current Research Focus
 
 Behavioral Drift Profiling
+
 Investigating how different prompt types (technical, emotional, creative, casual) affect response consistency. Using Watchdog as an automated test harness to build personality profiles across conversational contexts.
+
 Memory Composition → Personality Drift
+
 Exploring how memory content probabilistically shapes future behavior. If negative prompts dominate stored memory, retrieval bias increases likelihood of negative responses—creating measurable personality drift through pure probability, not programming.
+
 Self-Referential Prompt Vulnerabilities
+
 Documenting how self-referential queries specifically trigger memory poisoning cascades. Expanding the 2-hour timeline observation into detailed failure mode taxonomy for AI safety research.
 Quality Filtering as Immune Response
+
 Developing the immune system framework into practical design guidance for memory-augmented AI systems. Exploring optimal threshold values, multi-factor scoring approaches, and adaptive immune responses.
 
-
-Together we'll make sure what comes out isn't just code, it's art.
+Mapping human to code, excited to see what happens.
 
