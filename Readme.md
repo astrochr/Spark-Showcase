@@ -65,7 +65,7 @@ So drift became our pulse monitor, a simple number that tells us if Spark is thi
 
 ![Mood Quadrants](moodquads.png)
 
-It is important to make sure this stays stable as new modules are added.
+Drift–Mood Quadrants: Mapping behavior along drift and critic strength.
 
 | Status | Domain                         | Core Role                                                          |
 | :----: | :----------------------------- | :----------------------------------------------------------------- |
@@ -90,15 +90,7 @@ I'd like to think everytime a new module is added to the list, the minimum itsel
 
 🧠 Architecture Snapshot
 
-![Spark Architecture](architecture_diagram.png)
-
-Drift–Mood Quadrants: Mapping behavior along drift and critic strength.
-
-##Mood Regulation System
-
-Planned(Need LoRAs):
-
-![Spark Mood Architecture](sparkmoodarch.png)
+![Spark Architecture](sparkmoodarch.png)
 
 Mood Architecture: Regulation flow between Dreamlayer, Critic, Drift Loop, and Watchdog.
 
