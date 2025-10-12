@@ -261,4 +261,4 @@ Developing the immune system framework into practical design guidance for memory
 
 Mapping human to code, excited to see what happens.
       
-      --Christian C.
+      Christian C.
