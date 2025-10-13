@@ -88,13 +88,6 @@ Planned: Q-System (Attention / Focus)
 
 I'd like to think everytime a new module is added to the list, the minimum itself increases. With every module potentially leading to more. At times it might also decrease depending on if it's being used or justifying hardware.
 
-🧠 Architecture Snapshot
-
-![Spark Architecture](sparkmoodarch.png)
-
-Mood Architecture: Regulation flow between Dreamlayer, Critic, Drift Loop, and Watchdog.
-
-
 Interesting Systems about Spark,
 
 Dual-layer memory (rolling buffer + FAISS semantic search)
