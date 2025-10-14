@@ -1,4 +1,3 @@
-[Readme.md](https://github.com/user-attachments/files/22896767/Readme.md)
 ## ⚡ Spark — Personal Cognitive Architecture
 
 **A living experiment in adaptive AI, self-regulation, and imperfection.**
