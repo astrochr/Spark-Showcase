@@ -19,7 +19,7 @@ Spark is a local cognitive framework — a personal lab that observes, reflects,
 
 | Brain Region | Module | Purpose |
 |---------------|---------|----------|
-| Frontal Lobe | Forge + Critic | Creation + evaluation; builds and protects coherence |
+| Frontal Lobe | Forge + Critic | Monitoring + evaluation; detects issues and protects coherence |
 | Hippocampus | FAISS + Postgres | Long- and short-term memory storage |
 | Temporal Lobe | Dreamlayer | Reflection + temperature tuning |
 | Cerebellum | Watchdog | Coordination, timing, drift detection |
@@ -39,7 +39,7 @@ User → Spark → Watchdog → Critic → Dreamlayer → Forge → Spark again.
 - **Watchdog** measures drift and latency.
 - **Critic** evaluates coherence.
 - **Dreamlayer** adjusts temperature and creative balance.
-- **Forge** refines and improves code.
+- **Forge** monitors system health and logs interventions (autonomous code modification planned).
 
 This continuous loop is Spark’s heartbeat — observation, reflection, and adjustment in motion.
 
@@ -89,7 +89,7 @@ Each quadrant represents a mental state — from calm precision to chaotic creat
 | III | Flask API Layer | Unified communication |
 | IV | Watchdog | Self-monitoring and drift metrics |
 | V | Dreamlayer / Critic | Reflection + coherence scoring |
-| VI | Forge | Self-improvement and code rewriting |
+| VI | Forge | Autonomous monitoring and state-aware intervention (code rewriting in development) |
 | VII | Cognitive State Detection (3A.2) | Spark gains self-awareness |
 | VIII | Cognitive Task Routing (3B) | Spark learns when to act and what to work on |
 
@@ -112,7 +112,7 @@ _That’s not theory — that’s Spark, live._
 | **CONSERVATIVE** | Low drift + strong critic | Audit, verify, and refine |
 | **COHERENCE_BREAKING** | High drift + weak critic | Recovery mode; reduce temperature |
 
-Every state triggers Forge differently — observation, refinement, or stabilization.
+Every state triggers Forge monitoring differently — observation, alerting, and logging for future intervention.
 
 ---
 
@@ -148,7 +148,27 @@ _The cognitive loop: creativity (drift) balanced by coherence (critic), stabiliz
 ---
 
 ### 🧭 Philosophy
-Spark isn’t about building a perfect mind — it’s about *building the conditions where one could grow.* Each drift spike, overcorrection, or lull is part of that process. Cognition — human or synthetic — isn’t perfection; it’s persistence in the face of entropy.
+Spark isn't about building a perfect mind — it's about *building the conditions where one could grow.* Each drift spike, overcorrection, or lull is part of that process. Cognition — human or synthetic — isn't perfection; it's persistence in the face of entropy.
 
-> “Curiosity built it. Observation keeps it alive.”
+> "Curiosity built it. Observation keeps it alive."
 
+---
+
+### 🔧 Current Implementation Status
+
+**Operational:**
+- ✅ Watchdog (329+ checks, 0 failures)
+- ✅ Critic (semantic + LLM evaluation)
+- ✅ Dreamlayer (cognitive state detection)
+- ✅ Memory (FAISS + Postgres, 874+ entries)
+- ✅ Forge monitoring (state-aware observation and logging)
+
+**In Development:**
+- 🚧 Forge autonomous code modification (Phase VI)
+- 🚧 Cognitive task routing (Phase 3B)
+- 🚧 Multimodal extensions (images via ComfyUI, APIs)
+
+**Planned:**
+- 📋 Camera integration for environmental awareness
+- 📋 External API tool use and learning
+- 📋 Multi-agent coordination
