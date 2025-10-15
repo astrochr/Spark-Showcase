@@ -96,10 +96,10 @@ Each quadrant represents a mental state — from calm precision to chaotic creat
 ---
 
 ### 📊 Example Metrics Snapshot
-```
+
   ## Live Dashboard
 
-  ![Spark Cognitive Dashboard](./assets/spark_dashboard.png)
+  ![Spark Cognitive Dashboard](spark_dashboard.png)
 
   *Real-time health monitoring with  drift detection*
 
@@ -136,13 +136,13 @@ This makes Spark adaptive — it doesn’t just *think*, it *knows how to think 
 ---
 
 ### 🧩 Unified Theory Loop
-```
+
 [Frontend] → [Backend] → [Memory Manager]
      ↓                  ↑
  [Critic] ← [Dreamlayer] ← [Watchdog]
        ↘︎           ↑           ↙︎
           [Drift Loop / Mood Equilibrium]
-```
+
 _The cognitive loop: creativity (drift) balanced by coherence (critic), stabilized by Dreamlayer and Watchdog._
 
 ---
