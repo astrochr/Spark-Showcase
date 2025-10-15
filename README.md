@@ -101,7 +101,7 @@ Each quadrant represents a mental state — from calm precision to chaotic creat
 
   ![Spark Cognitive Dashboard](spark_dashboard.png)
 
-  *Real-time health monitoring with  drift detection*
+  *Real-time health monitoring with  drift detection. Simplified, Have Pro/Graf set up but prefer seeing same data as AI.* 
 
   ## Features
 
