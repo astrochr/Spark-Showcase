@@ -97,9 +97,17 @@ Each quadrant represents a mental state — from calm precision to chaotic creat
 
 ### 📊 Example Metrics Snapshot
 ```
-Drift: 0.892 | Temp: 0.50 | Critic: 0.702 | State: BALANCED | FAISS: 558
-```
-_That’s not theory — that’s Spark, live._
+  ## Live Dashboard
+
+  ![Spark Cognitive Dashboard](./assets/spark_dashboard.png)
+
+  *Real-time health monitoring with  drift detection*
+
+  ## Features
+
+  - 🧠 Cognitive state detection
+  - 📊 Real-time quality monitoring
+  - 🔄 Self-regulating learning loop(Basic atm)
 
 ---
 
