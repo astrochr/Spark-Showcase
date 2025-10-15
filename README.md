@@ -158,7 +158,7 @@ _The cognitive loop: creativity (drift) balanced by coherence (critic), stabiliz
 ### 🧭 Philosophy
 Spark isn't about building a perfect mind — it's about *building the conditions where one could grow.* Each drift spike, overcorrection, or lull is part of that process. Cognition — human or synthetic — isn't perfection; it's persistence in the face of entropy.
 
-> "Curiosity built it. Observation keeps it alive."
+ "Curiosity built it. Observation keeps it alive."
 
 ---
 
