@@ -1,5 +1,5 @@
 ## ⚡ Spark — Personal Cognitive Architecture
-
+Maintained by Christian C.
 **A living experiment in adaptive AI, self-regulation, and imperfection.**
 
 ---
